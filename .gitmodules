@@ -1,0 +1,3 @@
+[submodule "lemmify"]
+	path = lemmify
+	url = https://github.com/mismorgano/lemmify.git
