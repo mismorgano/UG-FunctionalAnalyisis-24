@@ -1,11 +1,10 @@
-#import "@preview/lemmify:0.1.5": *
+// #import "@preview/lemmify:0.1.5": *
+#import "./lemmify/src/lib.typ": *
 
 // lemmify setup
 #let (
-  theorem, lemma, corollary,
-  remark, proposition, example,
   proof, rules: thm-rules
-) = default-theorems("thm-group", lang: "en")
+) = default-theorems("thm-group", lang: "es")
 
 // The template setup
 #let config(title, doc) = {
@@ -13,7 +12,7 @@
   show: thm-rules
 
   // latex-like setup
-  set text(12pt, font: "New Computer Modern Math")
+  set text(12pt, font: "New Computer Modern")
   set par(leading: 0.55em, first-line-indent: 0em, justify: true)
   show raw: set text(font: "New Computer Modern Mono")
   show par: set block(spacing: 0.55em)
@@ -50,6 +49,7 @@
   show "f.l":  _ => [funcional lineal]
   show "o.l":  _ => [operador lineal]  
   show "ssi":  _ => [si y solo si]
+  // show "eps": [epsilon]
 
   doc
 }
@@ -74,3 +74,6 @@
 #let ip(x, y) = $angle.l #x, #y angle.r$ // internal product
 #let cls(S) = $overline(#S)$  // closure
 #let conv(S) = $"conv"(#S)$   // convex hull
+#let span(S) = $"span"(#S)$
+#let int(S) = $"Int"(#S)$     // interior
+#let eps = $epsilon$

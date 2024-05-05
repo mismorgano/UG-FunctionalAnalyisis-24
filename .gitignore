@@ -1,3 +1,6 @@
 .vscode/
 
-**/*.pdf
+# ignore all pdf files
+*.pdf 
+#not ignore pdf files in notes
+!notes/**/*.pdf
